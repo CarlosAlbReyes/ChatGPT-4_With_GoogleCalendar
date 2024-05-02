@@ -21,7 +21,7 @@ def generate_events(user_input):
     event_summary = chatgpt_response.json()['choices'][0]['text']
 
     # Extrae información relevante del resumen del evento
-    event_details = parse_event_details(event_summary)
+    event_details = "parse_event_details" (event_summary)
 
     # Crea un objeto de evento de Google Calendar
     event = {
@@ -36,13 +36,12 @@ def generate_events(user_input):
             'timeZone': event_details['timezone']
         }
     }
-
     return event
-
 def create_event(service, event):
     event = service.events().insert(calendarId='primary', body=event).execute()
     print(f'Evento creado: {event["summary"]}')
     
+
     def main():
         service = authenticate_google_calendar()
 
@@ -55,7 +54,7 @@ def create_event(service, event):
         event = generate_events(user_input)
         create_event(service, event)
 
-if __name__ == '__main__':
-    main()
+    if __name__ == '__main__':
+        main()
 
 

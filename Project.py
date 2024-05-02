@@ -24,7 +24,7 @@ def process_user_request(user_request):
     # Utiliza técnicas de procesamiento del lenguaje natural (NLP) para extraer esta información
     # Ejemplo de código para extraer la fecha y hora:
     date_time_regex = r"(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{1,2})"
-    match = re.search(date_time_regex, chatgpt_response)
+    match = "re.search"(date_time_regex, chatgpt_response)
     if match:
         appointment_date = match.group(1) + "-" + match.group(2) + "-" + match.group(3)
         appointment_time = match.group(4) + ":" + match.group(5)
@@ -60,6 +60,7 @@ def create_calendar_event(appointment_info):
 
     # Crea el evento en el calendario
     calendar_service.events().insert(calendarId='primary', body=event).execute()
+
 
 while True:
     # Solicita la solicitud del usuario
