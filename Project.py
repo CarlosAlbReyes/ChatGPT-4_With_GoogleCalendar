@@ -7,7 +7,7 @@ from google.oauth2.service_account import Credentials
 openai_api_key = "sk-proj-UZCxZMfEJP5RkXuABqpeT3BlbkFJ5NCJFjkBvdTEOfQrVzXf"
 
 # Crea una instancia de la API de ChatGPT4
-chatgpt = OpenAIApi(openai_api_key)
+chatgpt = 'OpenAIApi'(openai_api_key)
 
 # Recuerda reemplazar con la ruta de tu archivo JSON de credenciales
 credentials_file_path = "credentials.json"
