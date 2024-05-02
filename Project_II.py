@@ -3,7 +3,7 @@ from googleapiclient.discovery import build
 from chatgpt import ChatGPT
 
 # Credenciales de Google Calendar
-credentials, _ = GoogleAuth().load_from_storage_file('credentials.json')
+credentials, _ = 'GoogleAuth'().load_from_storage_file('credentials.json')
 calendar = build('calendar', 'v3', credentials=credentials)
 
 # Instancia de ChatGPT
